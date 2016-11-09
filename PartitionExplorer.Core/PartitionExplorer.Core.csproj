@@ -44,6 +44,7 @@
     <Compile Include="Hashing\IStringHasher.cs" />
     <Compile Include="Hashing\Murmur3\MM3_32bit.cs" />
     <Compile Include="ILoadable.cs" />
+    <Compile Include="LoadableLoader.cs" />
     <Compile Include="Partitioning\IPartitioner.cs" />
     <Compile Include="PartitionKeyGeneration\IPartitionKeyGenerator.cs" />
     <Compile Include="Hashing\Murmur3\MM3_128bit.cs" />

@@ -1,8 +1,6 @@
-﻿using PartitionExplorer.Core;
-using PartitionExplorer.Core.Hashing;
+﻿using PartitionExplorer.Core.Hashing;
 using PartitionExplorer.Core.Partitioning;
 using PartitionExplorer.Core.PartitionKeyGeneration;
-using System;
 using System.Collections.Generic;
 
 namespace PartitionExplorer.Core

@@ -1,9 +1,6 @@
 ﻿using PartitionExplorer.Core.Hashing;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 //Adapted from http://blog.teamleadnet.com/2012/08/murmurhash3-ultra-fast-hash-algorithm.html
 namespace PartitionExplorer.Hashing.Murmur3
 {
