@@ -27,6 +27,7 @@ namespace PartitionExplorer.Core
             _partitionKeyGenerator = partitionKeyGenerator;
             _partitions = new Partition[_partitionCount];
             _partitioner = partitioner;
+            _hasher = hasher;
         }
 
         public void AddItem(string item)

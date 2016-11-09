@@ -7,9 +7,16 @@ namespace PartitionExplorer.Core
 {
     public class PartitionExplorer<THashOutput>
     {
-        private List<IPartitionKeyGenerator> _partitionKeyGenerators;
-        private List<IPartitioner<THashOutput>> _partitioners;
-        private List<IStringHasher<THashOutput>> _hashers;
+        private readonly List<IPartitionKeyGenerator> _partitionKeyGenerators;
+        private readonly List<IPartitioner<THashOutput>> _partitioners;
+        private readonly List<IStringHasher<THashOutput>> _hashers;
+
+        public PartitionExplorer()
+        {
+            _partitionKeyGenerators = new List<IPartitionKeyGenerator>();
+            _partitioners = new List<IPartitioner<THashOutput>>();
+            _hashers = new List<IStringHasher<THashOutput>>();
+        }
 
         public void AddPartitioner(IPartitioner<THashOutput> partitioner)
         {

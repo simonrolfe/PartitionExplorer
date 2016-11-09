@@ -17,7 +17,12 @@ using System.Text;
 public class MM3_32bit : IStringHasher<int>
 {
     //Change to suit your needs
-    const uint seed = 144;
+    private uint _seed = 144;
+
+    public void SetSeed(uint seed)
+    {
+        _seed = seed;
+    }
 
     public string Name { get { return "Murmur3 32 bit"; } }
 
@@ -37,7 +42,7 @@ public class MM3_32bit : IStringHasher<int>
         const uint c1 = 0xcc9e2d51;
         const uint c2 = 0x1b873593;
 
-        uint h1 = seed;
+        uint h1 = _seed;
         uint k1 = 0;
         uint streamLength = 0;
 

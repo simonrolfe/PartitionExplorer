@@ -13,11 +13,16 @@ namespace PartitionExplorer.Hashing.Murmur3
         private static ulong C2 = 0x4cf5ad432745937fL;
 
         private ulong length;
-        private uint seed; // if want to start with a seed, create a constructor
+        private uint _seed; // if want to start with a seed, create a constructor
         ulong h1;
         ulong h2;
 
         public string Name { get { return "Murmur3 128 bit"; } }
+
+        public void SetSeed(uint seed)
+        {
+            _seed = seed;
+        }
 
         private void MixBody(ulong k1, ulong k2)
         {
@@ -70,7 +75,7 @@ namespace PartitionExplorer.Hashing.Murmur3
 
         private void ProcessBytes(byte[] bb)
         {
-            h1 = seed;
+            h1 = _seed;
             this.length = 0L;
 
             int pos = 0;
